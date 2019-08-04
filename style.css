@@ -125,6 +125,7 @@ nav {
 
 @media screen and (max-width: 940px) {
 
+
     .nav-list {
         display: none;
     }
@@ -178,7 +179,7 @@ nav {
     }
 
     .burger-onclick {
-/*        transform: translate(-90%);*/
+        /*        transform: translate(-90%);*/
         transition: transform 0.5s ease-in;
         z-index: 2;
 
@@ -194,34 +195,45 @@ nav {
         z-index: 1;
         transition: all 0.5s ease;
     }
+
+    .nav-active {
+        transform: translateX(0%);
+        transition: transform 0.5s ease-in;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+    
+    .nav-list{
+        display: none;
+    }
 }
 
-.nav-active {
-    transform: translateX(0%);
-    transition: transform 0.5s ease-in;
-}
+
 
 @keyframes navLinksFade {
-    from{
+    from {
         opacity: 0;
         transform: translateX(20px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateX(0px);
     }
 }
 
-.toggle .line1{
+.toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 5px);
     position: relative;
     top: 3px;
 }
 
-.toggle .line2{
-    opacity:0;
+.toggle .line2 {
+    opacity: 0;
 }
 
-.toggle .line3{
+.toggle .line3 {
     transform: rotate(45deg) translate(-5px, -5px);
 }

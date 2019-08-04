@@ -9,18 +9,25 @@ const navSlide = () => {
         nav.classList.toggle('nav-active');
         burger.classList.toggle('burger-onclick');
         layer2.classList.toggle('layer-burger');
-
+        
+        //Fait disparaitre le menu de navigation
+        if (nav.style.display === 'block') {
+            nav.style.display = 'none';
+        } else {
+            nav.style.display = 'block';
+        }
+        
         //Burger animation
         burger.classList.toggle('toggle');
 
         //Animate Links
         navLinks.forEach((link, index) => {
-            if(link.style.animation){
+            if (link.style.animation) {
                 link.style.animation = '';
-            } else{
+            } else {
                 link.style.animation = `navLinksFade ${6*index/7}s ease forwards`;
             }
-            
+
         })
     });
 }
